@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Maker - Experiencias Únicas en Italia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #F5F5DC;
+            --text-color: #000000;
+            --accent-color: #C2B280;
+            --logo-color: #C2B280;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 1rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--logo-color);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .hero {
+            height: 100vh;
+            background-image: url('https://raw.githubusercontent.com/StyleMaker24/Style-Maker-site/main/Immagini/1600X900_venezia_san_marco_gabbiano.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--primary-color);
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 1rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #b3a372;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        .experiences {
+            padding: 4rem 5%;
+        }
+        .experience-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .experience-card {
+            background-color: var(--primary-color);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .experience-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .experience-card .content {
+            padding: 1rem;
+        }
+        .experience-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+        .experience-card p {
+            margin: 0 auto;
+            max-width: 90%;
+        }
+        footer {
+            background-color: #f8f8f8;
+            color: var(--text-color);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .experience-card {
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/StyleMaker24/Style-Maker-site/main/Immagini/Arena%2001.jpg" alt="Style Maker Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#experiencias">Experiencias</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre la <span class="italic-text">Verdadera Italia</span></h1>
+            <p>Experiencias únicas diseñadas por Style Maker</p>
+            <a href="#experiencias" class="cta-button">Explora Ahora</a>
+        </div>
+    </section>
+
+    <section id="experiencias" class="experiences">
+        <h2 class="section-title">Experiencias</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <img src="https://raw.githubusercontent.com/StyleMaker24/Style-Maker-site/main/Immagini/Roma%20in%20breve.jpg" alt="La Dolce Vita">
+                <div class="content">
+                    <h3>La Dolce Vita</h3>
+                    <p>Vive la vida al estilo italiano</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <img src="https://raw.githubusercontent.com/StyleMaker24/Style-Maker-site/main/Immagini/polignano-a-mare.jpg" alt="La vita è bella">
+                <div class="content">
+                    <h3>La vita è bella</h3>
+                    <p>Descubre los tesoros del Sur de Italia</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <img src="https://raw.githubusercontent.com/StyleMaker24/Style-Maker-site/main/Immagini/Pisa.jpg" alt="Ciao Italia">
+                <div class="content">
+                    <h3>Ciao Italia</h3>
+                    <p>Aventura italiana para jóvenes viajeros</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Style Maker. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
